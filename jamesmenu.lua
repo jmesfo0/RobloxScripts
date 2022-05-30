@@ -52,7 +52,7 @@
 	local added = {}
 	for i=1, 5 do
 	for i2, inst in pairs(petFrame:GetChildren()) do
-	if inst:FindFirstChild("NameLabel") and not added[i2] then
+	if inst:FindFirstChild("NameLabel") and not added[i2] and inst.Shiny.Visible == false then
 	added[i2] = true
 	firesignal(inst.Activated, inst, 1)
 	break
