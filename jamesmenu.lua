@@ -40,6 +40,7 @@
 			end
 		end)
     end)
+	main:Button('')
 	main:Button('Auto Fusion',function(v)
     main:Textbox('# of times? (filter 1 type of pet)')
 	local petFrame = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Main.Pets.PetsContainer.ScrollingFrame
