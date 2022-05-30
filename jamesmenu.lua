@@ -1,27 +1,25 @@
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jmesfo0/siernlib/main/library.lua"))()
-
-    local win = Library:Create({
-        Name = "James' Collect All Pets! Menu",
-    })
-
-    local maintab = win:Tab('Main')
-    local menutab = win:Tab('GUI Menus')
-
-    local main = maintab:Section('MAIN')
-    local character = menutab:Section('FAVORITES')
-    main:Button('Auto Collect',function(v)
-		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = math.huge
-		print('Auto Collect Enabled!')
-    end)
-    main:Button('Anti AFK',function(v)
-        wait(3)
+            wait(3)
 		local VirtualUser=game:service'VirtualUser'
 		game:service('Players').LocalPlayer.Idled:connect(function()
 		VirtualUser:CaptureController()
 		VirtualUser:ClickButton2(Vector2.new())
 		end)
-		print('Anti-AFK Enabled!')
+	
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/siernlib/main/library.lua"))()
+
+    local win = Library:Create({
+        Name = "James' Collect All Pets! Menu",
+    })
+
+    local maintab = win:Tab('MAIN')
+    local menutab = win:Tab('GUIs')
+
+    local main = maintab:Section('Main Menu (Anti-AFK Enabled!)')
+    local character = menutab:Section('Collect All Pets! GUIs')
+    main:Button('Auto Collect',function(v)
+		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = 999999
     end)
+
     main:Button ('Infinate Jump',function(v)
 		local Player = game:GetService'Players'.LocalPlayer;
 		local UIS = game:GetService'UserInputService';
@@ -42,7 +40,7 @@
 			end
 		end)
     end)
-	main:Button('Auto Fusion')
+	main:Button('Auto Fusion',function(v)
     main:Textbox('# of times? (filter 1 type of pet)',function(v)
 	local petFrame = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Main.Pets.PetsContainer.ScrollingFrame
 	local fuseButton = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Main.Pets.FuseFrame.FuseButton
