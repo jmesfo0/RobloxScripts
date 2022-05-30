@@ -10,8 +10,7 @@
     local main = maintab:Section('MAIN')
     local character = menutab:Section('FAVORITES')
     main:Button('Auto Collect',function(v)
-		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = math.huge
-		print('Auto Collect Enabled!')
+		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = 999999
     end)
     main:Button('Anti AFK',function(v)
         wait(3)
@@ -20,7 +19,6 @@
 		VirtualUser:CaptureController()
 		VirtualUser:ClickButton2(Vector2.new())
 		end)
-		print('Anti-AFK Enabled!')
     end)
     main:Button ('Infinate Jump',function(v)
 		local Player = game:GetService'Players'.LocalPlayer;
@@ -66,19 +64,14 @@
 	wait(1)
 	end
     end)
-    character:Label('These are my favorite menus for CAP')
     character:Button ('KodaLINEN GUI',function(v)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/Collect-All-Pets/main/main'))()
     end)
-    character:Button ('CasperFlyModz GUI',function(v)
-		_G.RedGUI = false
-		_G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
-		--Themes: Light, Dark, Mocha, Aqua and Jester
-		_G.V3rmillion = true
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))()
-    end)
     character:Button ('KodaLINEN Spoof GUI',function(v)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/spoof/main/main'))()
-    end)	
+    end)
+    character:Button ('CasperFlyModz GUI',function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))()
+    end)
 	
 	
