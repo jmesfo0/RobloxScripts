@@ -1,11 +1,11 @@
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jmesfo0/siernlib/main/library.lua"))()
 
     local win = Library:Create({
-        Name = "James' ROBLOX Menu",
+        Name = "James' Collect All Pets! Menu",
     })
 
     local maintab = win:Tab('Main')
-    local menutab = win:Tab('Favorite Menus')
+    local menutab = win:Tab('GUI Menus')
 
     local main = maintab:Section('MAIN')
     local character = menutab:Section('FAVORITES')
