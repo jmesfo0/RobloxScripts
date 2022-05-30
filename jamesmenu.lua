@@ -71,6 +71,7 @@
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/spoof/main/main'))()
     end)
     character:Button ('CasperFlyModz GUI',function(v)
+		_G.V3rmillion = true
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))()
     end)
 	
