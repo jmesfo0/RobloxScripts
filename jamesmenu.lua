@@ -1,4 +1,4 @@
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/siernlib/main/library.lua"))()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jmesfo0/siernlib/main/library.lua"))()
 
     local win = Library:Create({
         Name = "James' Collect All Pets! Menu",
