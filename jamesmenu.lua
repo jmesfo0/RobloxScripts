@@ -79,4 +79,6 @@
     end)
     character:Button ('KodaLINEN Spoof GUI',function(v)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/spoof/main/main'))()
-    end)
+    end)	
+	
+	
