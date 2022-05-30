@@ -1,7 +1,7 @@
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jmesfo0/siernlib/main/library.lua"))()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/siernlib/main/library.lua"))()
 
     local win = Library:Create({
-        Name = "James' ROBLOX Menu",
+        Name = "James' Collect All Pets! Menu",
     })
 
     local maintab = win:Tab('Main')
@@ -10,7 +10,7 @@
     local main = maintab:Section('MAIN')
     local character = menutab:Section('FAVORITES')
     main:Button('Auto Collect',function(v)
-		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = 999999
+		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = math.huge
 		print('Auto Collect Enabled!')
     end)
     main:Button('Anti AFK',function(v)
@@ -66,6 +66,7 @@
 	wait(1)
 	end
     end)
+    character:Label('These are my favorite menus for CAP')
     character:Button ('KodaLINEN GUI',function(v)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/Collect-All-Pets/main/main'))()
     end)
@@ -79,3 +80,5 @@
     character:Button ('KodaLINEN Spoof GUI',function(v)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/KodaLINEN/spoof/main/main'))()
     end)	
+	
+	
