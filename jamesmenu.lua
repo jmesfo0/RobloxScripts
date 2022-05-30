@@ -10,7 +10,7 @@
     local main = maintab:Section('MAIN')
     local character = menutab:Section('FAVORITES')
     main:Button('Auto Collect',function(v)
-		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = math.huge
+		local constantMod = require(game:GetService("ReplicatedStorage").Constants) constantMod.BaseDropCollectionRange = 999999
 		print('Auto Collect Enabled!')
     end)
     main:Button('Anti AFK',function(v)
