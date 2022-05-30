@@ -40,7 +40,15 @@
 			end
 		end)
     end)
-	main:Button('')
+	main:Button('Anti AFK',function(v)
+        wait(3)
+		local VirtualUser=game:service'VirtualUser'
+		game:service('Players').LocalPlayer.Idled:connect(function()
+		VirtualUser:CaptureController()
+		VirtualUser:ClickButton2(Vector2.new())
+		end)
+		print('Anti-AFK Enabled!')
+    end)
 	main:Button('Auto Fusion',function(v)
     main:Textbox('# of times? (filter 1 type of pet)')
 	local petFrame = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Main.Pets.PetsContainer.ScrollingFrame
